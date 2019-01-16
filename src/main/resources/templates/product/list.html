@@ -24,6 +24,8 @@
                 <th>Description</th>
                 <th>Price</th>
                 <th>Image URL</th>
+                <th>Model</th>
+                <th>In Stock?</th>
                 <th>List</th>
                 <th>Edit</th>
                 <th>Delete</th>
@@ -33,6 +35,8 @@
                 <td th:text="${product.description}"></td>
                 <td th:text="${product.price}"></td>
                 <td th:text="${product.imageUrl}"></td>
+                <td th:text="${product.model}"></td>
+                <td th:text="${product.inStock?'Yes':'No'}"></td>
                 <td><a th:href="${'/product/show/' + product.id}">View</a> </td>
                 <td><a th:href="${'/product/edit/' + product.id}">Edit</a> </td>
                 <td><a th:href="${'/product/delete/' + product.id}">Delete</a> </td>

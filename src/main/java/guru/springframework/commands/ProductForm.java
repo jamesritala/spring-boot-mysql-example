@@ -8,6 +8,8 @@ import java.math.BigDecimal;
  */
 public class ProductForm {
     private Long id;
+    private String model;
+    private boolean inStock;
     private String description;
     private BigDecimal price;
     private String imageUrl;
@@ -42,5 +44,21 @@ public class ProductForm {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public boolean isInStock() {
+        return inStock;
+    }
+
+    public void setInStock(boolean inStock) {
+        this.inStock = inStock;
     }
 }

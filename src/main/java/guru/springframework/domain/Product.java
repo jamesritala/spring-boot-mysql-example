@@ -16,6 +16,8 @@ public class Product {
     private String description;
     private BigDecimal price;
     private String imageUrl;
+    private String model;
+    private boolean inStock;
 
     public Long getId() {
         return _id;
@@ -47,5 +49,21 @@ public class Product {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public boolean isInStock() {
+        return inStock;
+    }
+
+    public void setInStock(boolean inStock) {
+        this.inStock = inStock;
     }
 }

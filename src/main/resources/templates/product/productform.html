@@ -65,6 +65,31 @@
                     </span>
                 </div>
             </div>
+            <div class="form-group" th:class="${#fields.hasErrors('model')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Model:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{model}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('model')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" th:class="${#fields.hasErrors('inStock')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">In Stock?:</label>
+                <div class="col-sm-10">
+                   <input type="radio" name="inStock" class="form-control" th:field="*{inStock}" th:errorclass="has-error" value="Yes" checked /> &nbsp;Yes
+                   <input type="radio" name="inStock" class="form-control" th:field="*{inStock}" th:errorclass="has-error" value="No"/> &nbsp;No
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('inStock')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
             <div class="row">
                 <button type="submit" class="btn btn-default">Submit</button>
             </div>
